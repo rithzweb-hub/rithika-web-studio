@@ -20,4 +20,4 @@ export const emailLink = (subject = "Website Project Inquiry") =>
 // 🔧 PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE 👇
 // (Looks like: https://script.google.com/macros/s/AKfyc.../exec)
 export const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbyq2itOh0J3yRIbVMe4NEx8BlKAe-j_TB0B7ex_uF2t98FV7WDX5jMULNp0g9VdEnwp2A/exec";
+  "https://script.google.com/macros/s/AKfycbwdrNb4Z2hKXIuHdEHXChEcWsH-i5i_ZePvZm77erCNozvlFz4kd-t3tJCGy0iPAmnlkQ/exec";
