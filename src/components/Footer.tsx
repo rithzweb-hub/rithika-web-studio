@@ -23,9 +23,13 @@ export const Footer = () => {
               <li>
                 <a
                   href={whatsappLink()}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.open(whatsappLink(), "_blank", "noopener,noreferrer");
+                  }}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 text-ink-soft hover:text-primary transition-colors"
+                  className="inline-flex items-center gap-3 text-ink-soft hover:text-primary transition-colors cursor-pointer"
                 >
                   <MessageCircle className="h-4 w-4" />
                   WhatsApp · {SITE.whatsappDisplay}
@@ -34,7 +38,7 @@ export const Footer = () => {
               <li>
                 <a
                   href={emailLink()}
-                  className="inline-flex items-center gap-3 text-ink-soft hover:text-primary transition-colors"
+                  className="inline-flex items-center gap-3 text-ink-soft hover:text-primary transition-colors cursor-pointer"
                 >
                   <Mail className="h-4 w-4" />
                   {SITE.email}
@@ -43,9 +47,13 @@ export const Footer = () => {
               <li>
                 <a
                   href={SITE.instagramUrl}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.open(SITE.instagramUrl, "_blank", "noopener,noreferrer");
+                  }}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 text-ink-soft hover:text-primary transition-colors"
+                  className="inline-flex items-center gap-3 text-ink-soft hover:text-primary transition-colors cursor-pointer"
                 >
                   <Instagram className="h-4 w-4" />
                   @{SITE.instagram}
