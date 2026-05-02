@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/button";
 import { whatsappLink, emailLink } from "@/config/site";
 
 export const CTA = ({ onStart }: { onStart: () => void }) => {
+  const openWhatsApp = () => {
+    window.location.href = whatsappLink();
+  };
+
   return (
     <section className="py-24 md:py-36 border-t border-hairline">
       <div className="container-luxe">
@@ -33,7 +37,7 @@ export const CTA = ({ onStart }: { onStart: () => void }) => {
               <Button
                 variant="whatsapp"
                 size="xl"
-                onClick={() => window.open(whatsappLink(), "_blank", "noopener,noreferrer")}
+                onClick={openWhatsApp}
               >
                 <MessageCircle className="h-5 w-5" />
                 Chat on WhatsApp
