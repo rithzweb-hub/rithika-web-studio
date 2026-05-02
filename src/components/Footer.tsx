@@ -4,7 +4,7 @@ import { SITE, whatsappLink, emailLink } from "@/config/site";
 export const Footer = () => {
   const openWhatsApp = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    window.location.href = whatsappLink();
+    window.open(whatsappLink(), "_top");
   };
 
   return (
