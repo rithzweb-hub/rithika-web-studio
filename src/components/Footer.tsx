@@ -2,6 +2,11 @@ import { Mail, Instagram, MessageCircle } from "lucide-react";
 import { SITE, whatsappLink, emailLink } from "@/config/site";
 
 export const Footer = () => {
+  const openWhatsApp = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.location.href = whatsappLink();
+  };
+
   return (
     <footer className="border-t border-hairline py-16 bg-background">
       <div className="container-luxe">
@@ -23,12 +28,7 @@ export const Footer = () => {
               <li>
                 <a
                   href={whatsappLink()}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.open(whatsappLink(), "_blank", "noopener,noreferrer");
-                  }}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={openWhatsApp}
                   className="inline-flex items-center gap-3 text-ink-soft hover:text-primary transition-colors cursor-pointer"
                 >
                   <MessageCircle className="h-4 w-4" />
@@ -47,10 +47,6 @@ export const Footer = () => {
               <li>
                 <a
                   href={SITE.instagramUrl}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.open(SITE.instagramUrl, "_blank", "noopener,noreferrer");
-                  }}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 text-ink-soft hover:text-primary transition-colors cursor-pointer"

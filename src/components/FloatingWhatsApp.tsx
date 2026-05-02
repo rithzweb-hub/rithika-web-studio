@@ -4,7 +4,7 @@ import { whatsappLink } from "@/config/site";
 export const FloatingWhatsApp = () => {
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    window.open(whatsappLink(), "_blank", "noopener,noreferrer");
+    window.location.href = whatsappLink();
   };
 
   return (

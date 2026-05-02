@@ -8,11 +8,16 @@ export const SITE = {
   whatsapp: "918870093264", // country code + number, no '+' or spaces
   whatsappDisplay: "+91 88700 93264",
   instagram: "rithzweb",
-  instagramUrl: "https://instagram.com/rithzweb",
+  instagramUrl: "https://www.instagram.com/rithzweb/",
 };
 
-export const whatsappLink = (msg = "Hi Rithika, I'd like to discuss a website project.") =>
-  `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(msg)}`;
+export const whatsappLink = (msg = "Hi Rithika, I'd like to discuss a website project.") => {
+  const query = `phone=${SITE.whatsapp}&text=${encodeURIComponent(msg)}`;
+  const isMobile =
+    typeof navigator !== "undefined" && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  return isMobile ? `whatsapp://send?${query}` : `https://web.whatsapp.com/send?${query}`;
+};
 
 export const emailLink = (subject = "Website Project Inquiry") =>
   `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}`;
