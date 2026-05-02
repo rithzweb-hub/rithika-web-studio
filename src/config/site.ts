@@ -12,11 +12,7 @@ export const SITE = {
 };
 
 export const whatsappLink = (msg = "Hi Rithika, I'd like to discuss a website project.") => {
-  const query = `phone=${SITE.whatsapp}&text=${encodeURIComponent(msg)}`;
-  const isMobile =
-    typeof navigator !== "undefined" && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-  return isMobile ? `whatsapp://send?${query}` : `https://web.whatsapp.com/send?${query}`;
+  return `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(msg)}`;
 };
 
 export const emailLink = (subject = "Website Project Inquiry") =>
