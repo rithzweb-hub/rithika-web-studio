@@ -8,16 +8,18 @@ const projects = [
     title: "Gym Website",
     tag: "Fitness · Lead Generation",
     description:
-      "A modern fitness website designed to increase memberships with pricing plans, trainer showcase, lead capture forms, and mobile-first design.",
+      "A modern fitness website designed to increase memberships...",
     image: gymImg,
+    link: "ironforge-tau.vercel.app", // 👈 ADD THIS
   },
   {
     n: "02",
     title: "Restaurant Website",
     tag: "Hospitality · Brand",
     description:
-      "An elegant restaurant website featuring menu sections, image gallery, reservation call-to-action, location details, and responsive browsing experience.",
+      "An elegant restaurant website...",
     image: restaurantImg,
+    link: "https://your-restaurant-site-link.com", // 👈 OPTIONAL
   },
 ];
 
