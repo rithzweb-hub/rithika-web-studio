@@ -30,17 +30,22 @@ export const CTA = ({ onStart }: { onStart: () => void }) => {
             </p>
 
             <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild variant="whatsapp" size="xl">
-                <a href={whatsappLink()} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="h-5 w-5" />
-                  Chat on WhatsApp
-                </a>
+              <Button
+                variant="whatsapp"
+                size="xl"
+                onClick={() => window.open(whatsappLink(), "_blank", "noopener,noreferrer")}
+              >
+                <MessageCircle className="h-5 w-5" />
+                Chat on WhatsApp
               </Button>
-              <Button asChild variant="ghostLine" size="xl" className="text-background border-background/30 hover:bg-background hover:text-ink">
-                <a href={emailLink()}>
-                  <Mail className="h-5 w-5" />
-                  Email Me
-                </a>
+              <Button
+                variant="ghostLine"
+                size="xl"
+                className="text-background border-background/30 hover:bg-background hover:text-ink"
+                onClick={() => { window.location.href = emailLink(); }}
+              >
+                <Mail className="h-5 w-5" />
+                Email Me
               </Button>
             </div>
 
