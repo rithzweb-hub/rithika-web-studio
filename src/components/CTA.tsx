@@ -4,7 +4,7 @@ import { whatsappLink, emailLink } from "@/config/site";
 
 export const CTA = ({ onStart }: { onStart: () => void }) => {
   const openWhatsApp = () => {
-    window.location.href = whatsappLink();
+    window.open(whatsappLink(), "_top");
   };
 
   return (
