@@ -1,10 +1,11 @@
 import { MessageCircle, Mail, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { whatsappLink, emailLink } from "@/config/site";
+import { openExternal, openProtocol } from "@/lib/openExternal";
 
 export const CTA = ({ onStart }: { onStart: () => void }) => {
   const openWhatsApp = () => {
-    window.open(whatsappLink(), "_top");
+    openExternal(whatsappLink());
   };
 
   return (
@@ -46,7 +47,7 @@ export const CTA = ({ onStart }: { onStart: () => void }) => {
                 variant="ghostLine"
                 size="xl"
                 className="text-background border-background/30 hover:bg-background hover:text-ink"
-                onClick={() => { window.location.href = emailLink(); }}
+                onClick={() => openProtocol(emailLink())}
               >
                 <Mail className="h-5 w-5" />
                 Email Me
