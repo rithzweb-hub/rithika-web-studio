@@ -15,6 +15,8 @@ export const whatsappLink = (msg = "Hi Rithika, I'd like to discuss a website pr
   return `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(msg)}`;
 };
 
+export const instagramLink = () => `https://www.instagram.com/${SITE.instagram}/`;
+
 export const emailLink = (subject = "Website Project Inquiry") =>
   `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}`;
 

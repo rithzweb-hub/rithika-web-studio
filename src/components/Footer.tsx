@@ -1,10 +1,21 @@
 import { Mail, Instagram, MessageCircle } from "lucide-react";
-import { SITE, whatsappLink, emailLink } from "@/config/site";
+import { SITE, whatsappLink, emailLink, instagramLink } from "@/config/site";
+import { openExternal, openProtocol } from "@/lib/openExternal";
 
 export const Footer = () => {
-  const openWhatsApp = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleWhatsApp = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    window.open(whatsappLink(), "_top");
+    openExternal(whatsappLink());
+  };
+
+  const handleInstagram = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    openExternal(instagramLink());
+  };
+
+  const handleEmail = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    openProtocol(emailLink());
   };
 
   return (
@@ -28,7 +39,9 @@ export const Footer = () => {
               <li>
                 <a
                   href={whatsappLink()}
-                  onClick={openWhatsApp}
+                  onClick={handleWhatsApp}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 text-ink-soft hover:text-primary transition-colors cursor-pointer"
                 >
                   <MessageCircle className="h-4 w-4" />
@@ -38,6 +51,7 @@ export const Footer = () => {
               <li>
                 <a
                   href={emailLink()}
+                  onClick={handleEmail}
                   className="inline-flex items-center gap-3 text-ink-soft hover:text-primary transition-colors cursor-pointer"
                 >
                   <Mail className="h-4 w-4" />
@@ -46,7 +60,8 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href={SITE.instagramUrl}
+                  href={instagramLink()}
+                  onClick={handleInstagram}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 text-ink-soft hover:text-primary transition-colors cursor-pointer"
