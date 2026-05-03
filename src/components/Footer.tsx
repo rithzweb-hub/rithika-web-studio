@@ -45,7 +45,7 @@ export const Footer = () => {
                   className="inline-flex items-center gap-3 text-ink-soft hover:text-primary transition-colors cursor-pointer"
                 >
                   <MessageCircle className="h-4 w-4" />
-                  WhatsApp · {SITE.whatsappDisplay}
+                  WhatsApp
                 </a>
               </li>
               <li>
