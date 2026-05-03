@@ -137,7 +137,7 @@ export const ProjectForm = ({ open, onClose }: Props) => {
         </div>
 
         {success ? (
-          <div className="px-6 md:px-10 py-16 text-center">
+          <div className="px-6 md:px-10 py-16 text-center overflow-y-auto">
             <div className="mx-auto h-16 w-16 rounded-full bg-primary-soft flex items-center justify-center">
               <CheckCircle2 className="h-8 w-8 text-primary" />
             </div>
@@ -159,7 +159,7 @@ export const ProjectForm = ({ open, onClose }: Props) => {
             </Button>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="px-6 md:px-10 py-8 space-y-7">
+          <form onSubmit={handleSubmit} className="px-6 md:px-10 py-8 space-y-7 overflow-y-auto flex-1">
             <p className="text-sm text-ink-soft">
               Tell me about your business and I'll recommend the best website
               solution for your goals.
