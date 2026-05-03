@@ -112,15 +112,15 @@ export const ProjectForm = ({ open, onClose }: Props) => {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-start md:items-center justify-center bg-ink/60 backdrop-blur-sm overflow-y-auto p-0 md:p-6 animate-fade-in"
+      className="fixed inset-0 z-[100] flex items-stretch md:items-center justify-center bg-ink/60 backdrop-blur-sm p-0 md:p-6 animate-fade-in"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-2xl bg-background md:rounded-3xl shadow-[var(--shadow-lg)] my-0 md:my-10"
+        className="relative w-full max-w-2xl bg-background md:rounded-3xl shadow-[var(--shadow-lg)] flex flex-col max-h-screen md:max-h-[90vh] overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="sticky top-0 z-10 bg-background/95 backdrop-blur md:rounded-t-3xl border-b border-hairline px-6 md:px-10 py-5 flex items-center justify-between">
+        <div className="shrink-0 bg-background md:rounded-t-3xl border-b border-hairline px-6 md:px-10 py-5 flex items-center justify-between">
           <div>
             <span className="eyebrow">Contact Us</span>
             <h3 className="display text-2xl md:text-3xl mt-1">
