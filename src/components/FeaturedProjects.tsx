@@ -10,7 +10,7 @@ const projects = [
     description:
       "A modern fitness website designed to increase memberships...",
     image: gymImg,
-    link: "ironforge-tau.vercel.app", // 👈 ADD THIS
+    link: "https://ironforge-tau.vercel.app",
   },
   {
     n: "02",
@@ -19,7 +19,7 @@ const projects = [
     description:
       "An elegant restaurant website...",
     image: restaurantImg,
-    link: "https://your-restaurant-site-link.com", // 👈 OPTIONAL
+    link: "https://mitty-flame.vercel.app/",
   },
 ];
 
