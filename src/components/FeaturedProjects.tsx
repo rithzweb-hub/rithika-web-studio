@@ -10,7 +10,7 @@ const projects = [
     description:
       "A modern fitness website designed to increase memberships...",
     image: gymImg,
-    link: "ironforge-tau.vercel.app", // 👈 ADD THIS
+    link: "https://ironforge-tau.vercel.app",
   },
   {
     n: "02",
@@ -19,7 +19,7 @@ const projects = [
     description:
       "An elegant restaurant website...",
     image: restaurantImg,
-    link: "https://your-restaurant-site-link.com", // 👈 OPTIONAL
+    link: "https://mitty-flame.vercel.app/",
   },
 ];
 
@@ -74,10 +74,15 @@ export const FeaturedProjects = () => {
                   {p.title}
                 </h3>
                 <p className="mt-6 text-ink-soft leading-relaxed">{p.description}</p>
-                <button className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-ink border-b border-ink pb-1 hover:text-primary hover:border-primary transition-colors group">
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-ink border-b border-ink pb-1 hover:text-primary hover:border-primary transition-colors group"
+                >
                   View Project
                   <ArrowUpRight className="h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </button>
+                </a>
               </div>
             </article>
           ))}
